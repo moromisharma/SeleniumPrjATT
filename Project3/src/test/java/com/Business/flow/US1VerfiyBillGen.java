@@ -1,17 +1,19 @@
 package com.Business.flow;
 
 import static org.testng.Assert.assertEquals;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import com.Base.UtilBrowser;
 import com.Base.UtilScreenshot;
+import com.Base.dateFormat;
 import com.Base.UtilAccount;
+
+
+
+
 public class US1VerfiyBillGen extends  UtilBrowser{
 
 	public static String HomePageTitle ="AT&T® Official - Entertainment, TV, Wireless & Internet";
@@ -117,6 +119,7 @@ public class US1VerfiyBillGen extends  UtilBrowser{
 		US1VerfiyBillGen logObj1 = new US1VerfiyBillGen(driver);
 		//UtilBrowser w1 = new UtilBrowser(driver);
 		UtilAccount  A1 = new UtilAccount(driver);
+		dateFormat C1 = new dateFormat();
 		UtilScreenshot ts = new UtilScreenshot(driver);
 		WebElement e =null;
 		
@@ -218,12 +221,35 @@ public class US1VerfiyBillGen extends  UtilBrowser{
 	 * @Verification - Check the date  on the balance 
 	 * 
 	 * */
-	
+	try{
 	 e =A1.setCurrentDate();
 	 String cDate= (e.getText()); 
-	 System.out.println(cDate);	 
+	 String cDatefromclass =(C1.currentdate());
+	 System.out.println(cDate);	
+	 System.out.println(cDatefromclass);
+	 
+
+		 
+	 
+	 if (cDatefromclass.equals(cDate)){
+		 
+		 System.out.println("The Date is the current Date");
+	 }
 	}
+	 
+	 catch (Exception ex){
+		 System.out.println("Check your code");
+	 }
+	
 	}
+	
+	 
+	  
+	 
+	 
+ 
+	}
+	
 	
 
 	

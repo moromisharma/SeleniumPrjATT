@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite_US1" parallel="false"> <!-- AnyName -->>
+  <test name="Test_US1"> <!--  -->
+    <classes>
+      <class name="com.Business.flow.US1VerfiyBillGen"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
