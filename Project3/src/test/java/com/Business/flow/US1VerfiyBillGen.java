@@ -225,15 +225,21 @@ public class US1VerfiyBillGen extends  UtilBrowser{
 	 e =A1.setCurrentDate();
 	 String cDate= (e.getText()); 
 	 String cDatefromclass =(C1.currentdate());
-	 System.out.println(cDate);	
 	 System.out.println(cDatefromclass);
+	 int datelength = cDate.length();
 	 
+	 String newcDate= cDate.substring(6, datelength);
+	 System.out.println(newcDate);
 
 		 
 	 
-	 if (cDatefromclass.equals(cDate)){
+	 if (cDatefromclass.equals(newcDate)){
 		 
 		 System.out.println("The Date is the current Date");
+	 }
+	 
+	 else{
+		 System.out.println("Check your code");
 	 }
 	}
 	 
