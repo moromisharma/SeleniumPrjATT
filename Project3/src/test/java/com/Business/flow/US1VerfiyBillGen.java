@@ -59,6 +59,12 @@ public class US1VerfiyBillGen extends  UtilBrowser{
 		/*
 		 * Check if the title matches
 		 */
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 	
 		try{				
@@ -127,6 +133,13 @@ public class US1VerfiyBillGen extends  UtilBrowser{
 		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS); // implicit wait use explicit wait.
 		logObj1.password("Moroini08");
 		logObj1.loginButton();
+		
+		try {
+			Thread.sleep(20000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		/*
 		 * @Verification - point1 - Check if redirecting to promo URL
